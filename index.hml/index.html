@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Stict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-
+strict.dtd">
+<html  xmlns="http://www.w3.org/1999/xhtml" lang = "zh-CN">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+	<meta name="msapplication-tap-highlight" content="no" />
+	<meta name="renderer" content="webkit">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="white">
+	<meta name="apple-touch-fullscreen" content="yes" />
+	<title>Miss商品详情页面</title>
+	<link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="../css/index.css" type="text/css">
+	<script type="text/javascript" src="../js/flexible.js"></script>
+	<style>
+		[v-cloak] {
+			display: none !important;
+		}
+	</style>
+</head>
+<body>
+	<div class="container" id="app">
+		<div class="headimage">
+			<img :src="detailData.headimage">
+		</div>
+		<div class="whiteBg">
+			<div class="bannerCon">
+				<div class='countDown' v-if="detailData.beginremain<0&&detailData.endremain<0"> <!-- 活动中就是要 -->
+			      <div>活动已结束</div>
+			    </div>
+			    <div class='countDown' v-if="detailData.beginremain<0&&detailData.endremain>0">
+			      <div>距活动结束还剩:<span class='countTime'> {{countDownDay}}</span>天</div>
+			      <div><span class='countTime'>{{countDownHour}}</span>时</div>      
+			      <div><span class='countTime'>{{countDownMinute}}</span>分</div>      
+			      <div><span class='countTime'>{{countDownSecond}}</span>秒</div>
+			    </div>
+			    <div class='countDown' v-if="detailData.beginremain>0"> <!-- 活动还没开始 -->
+			      <div>距活动开始:<span class='countTime'> {{countDownDay}}</span>天</div>
+			      <div><span class='countTime'>{{countDownHour}}</span>时</div>      
+			      <div><span class='countTime'>{{countDownMinute}}</span>分</div>      
+			      <div><span class='countTime'>{{countDownSecond}}</span>秒</div>
+			    </div>
+			</div>
+		</div>
+		<!-- 试用装 -->
+		<div class="whiteBg">
+			<div class="activeCon">
+				<div class="activeCon_up">{{detailData.name}}</div>
+				<div class="activeCon_down">
+					<div class="activeCon_left">价值 : ￥{{detailData.price}}</div>
+					<div class="activeCon_right">优惠拔草</div>
+				</div>
+			</div>
+		</div>
+		<div class="whiteBg">
+			<div class="assistance">
+				<div class="assistanceHeader">
+					<div class="assistanceLeft">
+						<div class="assistanceTitle">分享助力</div>
+						<div class="assistanceTitle1">分享给好友，获得更高几率</div>
+					</div>
+					<div class="assistanceRight">
+						<div class="assistanceBtn">助力协议</div>
+					</div>
+				</div>
+			</div>
+			<div class="one">
+				<div class="gao" >
+					<div class="shuju" v-for='(item,index) in zhulishuju'>
+						<div class="xuhao">{{index+1}}</div>
+						<div class="icon-waikuang">
+							<div class="icon-neikuang">
+								<img :src="item.icon">
+							</div>
+						</div>
+						<div class="nickname">
+							{{item.nickname}}
+						</div>
+						<div class="support_num">
+							{{item.support_num}}
+						</div>
+					</div> 
+				</div>
+				<div class="chakangengduo" @click='chakangengduo'>查看更多</div>
+			</div>
+		</div>
+		<div class="whiteBg">
+			<div class="shangpin">
+				<div class="detailHeader">
+					<div class="shangpinxiangqing">商品详情</div>
+					<div class="aaaa">品牌 : {{detailData.brand}}</div>
+					<div class="aaaa">品名 : {{detailData.product_name}}</div>
+					<div class="aaaa">规格 : {{detailData.specifications}}</div>
+				</div>
+				<div class="memo">
+					<img :src="detailData.memo">
+				</div>
+			</div>
+		</div>
+		<div class="shenqing">免费申请</div>
+	</div>
+	<script src="../js/vue.js"></script>
+	<script src="../js/vue-trend.js"></script>
+	<script src="../js/axios.js"></script>
+	<script src="../js/index.js"></script>
+</body>
+</html>

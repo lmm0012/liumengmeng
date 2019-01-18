@@ -1,0 +1,34 @@
+.container{width: 10rem; margin: 0 auto; background-color: #f7f7f7;}
+.headimage{width: 100%; height: 6.0rem; background-color: #ccc;}
+.headimage img{width: 100%; height: 6.0rem;}
+.whiteBg{width: 100%; background-color: white;}
+.bannerCon{width: 9rem; border-top: 1px solid #ccc; margin: 0 auto 0.3rem auto; color: #999999; font-size: 0.32rem;}
+.countDown{display: flex; width: 100%;  color: #9A9A9A; height: 1rem; line-height: 1rem; background-color: white}
+.countTime{color:#E70B58; margin:0 0.1rem; font-size: 14px}
+.activeCon{width: 9rem; margin: 0 auto; padding-bottom: 0.4rem}
+.activeCon_up{font-size: 0.35rem; font-weight: bold; padding: 0.4rem 0;}
+.activeCon_down{display: flex; justify-content: space-between; width: 100%; height: 0.7rem; align-items: center; font-size: .3rem}
+.activeCon_right{height: 0.7rem; width: 1.866667rem; border:1px solid rgba(231,11,88,1); border-radius:0.35rem; text-align: center; line-height: 0.7rem; color: #E70B58}
+.assistance{width: 9rem; margin: 0.3rem auto; padding-bottom: 0.5rem;}
+.assistanceHeader{display: flex; width: 100%; justify-content: space-between; align-items: center; height: 1.9rem}
+.assistanceLeft{ height: 1.9rem}
+.assistanceTitle{font-size: 0.4rem; color: #0A0A0A; height: 1rem; line-height: 1rem; font-weight: bold;}
+.assistanceTitle1{font-size: 0.32rem; color: #999999;}
+.assistanceRight{height: 1.9rem;}
+.assistanceBtn{width: 1.866667rem; height: 0.6rem; line-height: 0.6rem; text-align: center; border-radius: 0.3rem; background-color: #E80B58; font-size: 0.3rem; color: white; margin-top: 0.8rem; }
+.one{width: 9rem; border-top: 2px solid #E80B58; margin: 0 auto; display: flex; flex-direction: column; align-items: center; box-shadow: 0 0 11px 2px rgba(0,0,0,0.10);}
+.shuju{width: 8rem; border-bottom: 1px solid #ccc; height: 1.2rem; display: flex; align-items: center;}
+.xuhao{height: 1.2rem; line-height: 1.2rem; font-size:0.4rem; width: 1rem; text-align: center;}
+.icon-waikuang{width: 2rem;}
+.icon-neikuang{height:0.9rem; width: 0.9rem; border-radius: 0.45rem; overflow: hidden; font-size: 0;}
+.icon-neikuang img{height:0.9rem; width: 0.9rem;}
+.nickname{height: 1.2rem; line-height: 1.2rem;font-size:0.3rem; width: 4rem; white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+.support_num{height: 1.2rem; line-height: 1.2rem; font-size:0.3rem; width: 1rem}
+.chakangengduo{height: 1.2rem; line-height: 1.2rem; width: 100%; text-align: center; font-size: 0.3rem; color: #E80B58; background-color: white}
+.shangpin{width: 9rem; margin: 0 auto;}
+.detailHeader{font-size: 0.32rem; color: #666666; padding-top: 0.2rem; font-weight: bold;}
+.shangpinxiangqing{font-size: 0.4rem; color: #0A0A0A; margin: 0 0 0.5rem 0}
+.aaaa{margin-bottom: 0.3rem}
+.memo{width: 9rem; border-top: 2px solid #E80B58;}
+.memo img{width: 9rem;}
+.shenqing{position:fixed; bottom: 0; width:100%; background-color: red; height: 1rem; text-align: center; line-height: 1rem;}
